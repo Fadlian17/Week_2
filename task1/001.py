@@ -1,11 +1,8 @@
-# capitalize paradigm
+# capitalize word
 
-title = "hello world again"
-print(title.capitalize())
-name1 = "hello"
-name2 = "world"
-name3 = "again"
+def capitalize(capitalword):
+    return capitalword.title()
 
 
-print(name1.capitalize(), "" +
-      name2.capitalize(), "" + name3.capitalize())
+word = capitalize("hello world again")
+print(word)
