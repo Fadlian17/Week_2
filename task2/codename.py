@@ -40,11 +40,17 @@ class Code:
 
     @staticmethod
     def empat4():
-        tahuns = int(input("Masukkan tahun Masehi: "))
-        if tahuns % 400 == 0 | tahuns % 100 == 0 | tahuns % 4 == 0:
-            print("%i merupakan tahun kabisat" % (tahuns))
+        tahun = int(input("Masukkan Data tahun: "))
+        if (tahun % 4) == 0:
+            if (tahun % 100) == 0:
+                if (tahun % 400) == 0:
+                    print("{0} merupakan tahun kabisat".format(tahun))
+                else:
+                    print("{0} bukan merupakan tahun kabisat".format(tahun))
+            else:
+                print("{0} merupakan tahun kabisat".format(tahun))
         else:
-            print("%i merupakan bukan tahun kabisat" % (tahuns))
+            print("{0} bukan merupakan tahun kabisat".format(tahun))
 
     @staticmethod
     def lima5():
@@ -84,7 +90,7 @@ class Code:
                 print(a)
 
     @staticmethod
-    def delapan():
+    def delapan8():
         def cetak(a, b):
             for item in range(a, b):
                 if item % 2 == 0:
@@ -104,15 +110,13 @@ class Code:
         cetak(1, 200)
 
     @staticmethod
-    def sembilan(x):
-        return x[::-1]
-    mytxt = sembilan("saya ingin makan nasi goreng")
-
-    print(mytxt)
+    def sembilan9():
+        sentence = 'saya ingin makan nasi goreng'
+        string = sentence.split()
+        print(' '.join(string[::-1]))
 
     @staticmethod
     def sepuluh10():
-
         stuff = ['Meja', 'Buku', 'Topi', 'Baju', 'Kayu']
         stuff.insert(5, "Celana")
         stuff.insert(0, "Handuk")
@@ -120,4 +124,14 @@ class Code:
 
 
 if __name__ == "__main__":
+    Code.satu1
+    Code.dua2
+    Code.tiga3
+    Code.empat4
+    Code.lima5
+    Code.enam6
+    Code.tujuh7
+    Code.delapan8
+    Code.sembilan9
+    Code.sepuluh10
     print("Result OK")
