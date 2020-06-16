@@ -1,3 +1,4 @@
+# kelipatan
 def cetak(a, b):
     for item in range(a, b):
         if item % 2 == 0:
