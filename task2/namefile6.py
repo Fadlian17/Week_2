@@ -1,3 +1,4 @@
+# range
 first = int(input("Input pertama : "))
 second = int(input("Input kedua : "))
 

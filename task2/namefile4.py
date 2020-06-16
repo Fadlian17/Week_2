@@ -1,5 +1,5 @@
 # Kabisat
-tahuns = int(input("Masukkan tahun: "))
+tahuns = int(input("Masukkan tahun Masehi: "))
 
 if tahuns % 400 == 0 | tahuns % 100 == 0 | tahuns % 4 == 0:
     print("%i merupakan tahun kabisat" % (tahuns))

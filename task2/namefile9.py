@@ -3,6 +3,6 @@ def my_function(x):
     return x[::-1]
 
 
-mytxt = my_function("I wonder how this text looks like backwards")
+kalimat = my_function("saya ingin makan nasi goreng")
 
-print(mytxt)
+print(kalimat)
