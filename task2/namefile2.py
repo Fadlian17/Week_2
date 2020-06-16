@@ -20,3 +20,5 @@ elif score >= 60 and score < 70:
 elif score < 60:
 
     print("grade E")
+else:
+    print("None")
