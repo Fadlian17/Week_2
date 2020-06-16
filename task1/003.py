@@ -5,6 +5,5 @@ def kebabCase(str):
                     else i for i in str]).lstrip('-')
 
 
-# Driver code
 kebabword = "HelloWorldAgain"
 print(kebabCase(kebabword))
