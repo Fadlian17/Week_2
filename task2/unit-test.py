@@ -1,37 +1,48 @@
 import unittest
-from codename import Code as C
+from codename import examCode as EC
 
 
-class CodeTest(unittest.TestCase):
-    def tes_satu1(self):
-        C.satu1()
+class SoalTest(unittest.TestCase):
+    def test_satu(self):
+        self.assertEqual(EC.satu1("saya"), 4)
+        self.assertIsNotNone(EC.satu1("saya"))
 
-    def tes_dua2(self):
-        C.dua2()
+    def test_dua(self):
+        self.assertEqual(EC.dua2(90), "A")
+        self.assertIsNotNone(EC.dua2(85))
 
-    def tes_tiga(self):
-        C.tiga3()
+    def test_tiga(self):
+        self.assertEqual(EC.tiga3(43), "Ganjil")
+        self.assertIsNotNone(EC.tiga3(45))
 
-    def tes_empat(self):
-        C.empat4()
+    def test_empat(self):
+        self.assertEqual(EC.empat4(1900), "Bukan Tahun Kabisat")
+        self.assertIsNotNone(EC.empat4(2000))
 
-    def tes_lima(self):
-        C.lima5()
+    def test_lima(self):
+        self.assertEqual(EC.lima5(21), "Dewasa")
+        self.assertIsNotNone(EC.lima5(19))
 
-    def tes_enam(self):
-        C.enam6()
+    def test_enam(self):
+        self.assertEqual(EC.enam6(4, 8), [4, 5, 6, 7, 8])
+        self.assertIsNotNone(EC.enam6(1, 10))
 
-    def tes_tujuh(self):
-        C.tujuh7()
+    def test_tujuh(self):
+        self.assertIn(11, EC.tujuh7())
+        self.assertIsNotNone(EC.tujuh7())
 
-    def tes_delapan(self):
-        C.delapan8()
+    def test_delapan(self):
+        self.assertEqual(EC.delapan8(), EC.delapan8())
+        self.assertIsNone(EC.delapan8())
 
-    def tes_sembilan(self):
-        C.sembilan9()
+    def test_sembilan(self):
+        self.assertEqual(EC.sembilan9("saya ingin makan nasi goreng"),
+                         "goreng nasi makan ingin saya")
 
-    def tes_sepuluh(self):
-        C.sepuluh10()
+    def test_sepuluh(self):
+        self.assertIn('Handuk', EC.sepuluh10())
+        self.assertIsNotNone(EC.sepuluh10())
 
-    if __name__ == "__main__":
-        unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()

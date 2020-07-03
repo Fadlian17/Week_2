@@ -1,137 +1,280 @@
-class Code:
+# class CodeUnit():
+
+#     """Code unit test"""
+#     # soal 1
+#     @staticmethod
+#     def satu1(karakters):
+#         return len(karakters)
+
+#     # soal 2
+#     @staticmethod
+#     def dua2(score):
+#         if score in range(90, 100):
+#             return "A"
+#         elif score in range(80, 90):
+#             return "B"
+#         elif score in range(70, 80):
+#             return "C"
+#         elif score in range(60, 70):
+#             return "D"
+#         elif score in range(0, 60):
+#             return "E"
+
+#     # soal dua
+#     @staticmethod
+#     def grade(nilai):
+#         if type(nilai) == int:
+#             return CodeUnit.dua2(nilai)
+#         else:
+#             raise ValueError('Inputan harus angka')
+
+#     # soal tiga
+#     def tiga3(nilai):
+#         data = {0: 'Genap', 1: 'Ganjil'}
+#         return data[nilai % 2]
+
+#     @staticmethod
+#     def ganjil_genap(nilai):
+#         if type(nilai) == int:
+#             return CodeUnit.tiga3(nilai)
+#         else:
+#             raise ValueError('Inputan harus angka')
+
+#     # soal empat
+
+#     def empat4(tahun):
+#         if tahun % 400 == 0:
+#             return "Kabisat"
+#         elif tahun % 100 == 0:
+#             return "Bukan Kabisat"
+#         elif tahun % 4 == 0:
+#             return "Kabisat"
+#         else:
+#             return "Bukan Kabisat"
+
+#     @staticmethod
+#     def tahun_kabisat(tahun):
+#         if type(tahun) == int:
+#             return CodeUnit.empat4(tahun)
+#         else:
+#             raise ValueError('Inputan harus angka')
+
+#     @staticmethod
+#     def lima5(film):
+#         film = int(input("Rating sebuah Film = "))
+
+#         if (film >= 21):
+#             print("Khusus DEWASA")
+
+#         elif (film >= 13):
+#             print("Khusus Remaja")
+
+#         elif (film >= 9):
+#             print("Bimbingan Orang tua")
+
+#         elif (film < 9):
+#             print("Semua Usia")
+
+#     @staticmethod
+#     def kategori_film_rating(film):
+#         if type(film) == int:
+#             return CodeUnit.lima5(film)
+#         else:
+#             raise ValueError('Inputan harus angka')
+
+#     # soal 6
+
+#     def enam6(a, b):
+#         output = []
+#         for x in range(a, b+1):
+#             output.append(str(x))
+#         return output
+
+#     @staticmethod
+#     def range_angka(a, b):
+#         if type(a) == int and type(b) == int:
+#             return ', '.join(CodeUnit.enam6(a, b)[0:len(CodeUnit.enam6(a, b))])
+#         else:
+#             raise ValueError('Inputan harus angka')
+
+#     # soal 7
+#     @staticmethod
+#     def tujuh7(a, b):
+#         return list(filter(lambda x: x % 2 == 1, range(a, b)))
+
+#     # soal 8
+
+#     @staticmethod
+#     def delapan8(a, b):
+#         def cetak(a, b):
+#             datas = []
+#             for item in range(a, b):
+#                 if item % 2 == 0:
+#                     if item % 5 == 0:
+#                         if item % 100 == 0:
+#                             datas.append(
+#                                 "%i. Genap Kelipatan Seratus" % (item))
+#                         else:
+#                             datas.append("%i. Genap Kelipatan Lima" % (item))
+#                     else:
+#                         datas.append("%i. Genap" % (item))
+#                 else:
+#                     if item % 5 == 0:
+#                         datas.append("%i. Ganjil Kelipatan Lima" % (item))
+#                     else:
+#                         datas.append("%i. Ganjil" % (item))
+#             return datas
+
+#     # soal 9
+#     @staticmethod
+#     def sembilan9(sentence):
+#         string = sentence.split()
+#         print(' '.join(string[::-1]))
+
+#     # soal 10
+#     @staticmethod
+#     def sepuluh10(datas, awal, akhir):
+#         datas = datas
+#         datas.insert(0, awal)
+#         datas.insert(len(datas)+1, akhir)
+#         return datas
+
+
+# if __name__ == "__main__":
+#     tes = CodeUnit()
+#     print(CodeUnit.dua2(39))
+#     print(CodeUnit.empat4(2004))
+#     print(CodeUnit.lima5(9))
+#     print(CodeUnit.enam6(4, 8))
+#     print(CodeUnit.tujuh7(1, 100))
+#     print("\n")
+#     print(CodeUnit.delapan8(1, 10))
+#     print("\n")
+#     print(CodeUnit.sembilan9('saya ingin makan nasi goreng'))
+#     print(CodeUnit.sepuluh10(
+#         ['Meja', 'Buku', 'Topi', 'Baju', 'Kayu'], 'Handuk', 'Celana'))
+#     print("Result OK")
+
+class examCode:
     @staticmethod
-    def satu1():
-        katas = input("masukkan kata:")
-        hitung = len(katas)
-        print("kata %s memiliki panjang karakter: %i " % (katas, hitung))
+    def satu1(var):
+        string = var
+        total = 0
+
+        for x in string:
+            total = total + 1
+        return total
 
     @staticmethod
-    def dua2():
-        score = int(input("Masukkan nilai anda = "))
-        if score >= 90:
+    def dua2(var):
+        nilai = var
 
-            print("grade A")
-
-        elif score >= 80 and score < 90:
-
-            print("grade B")
-
-        elif score >= 70 and score < 80:
-
-            print("grade C")
-
-        elif score >= 60 and score < 70:
-
-            print("grade D")
-
-        elif score < 60:
-
-            print("grade E")
+        if nilai >= 90:
+            return "A"
+        elif (nilai >= 80) and (nilai <= 89):
+            return "B"
+        elif (nilai >= 70) and (nilai <= 79):
+            return "C"
+        elif (nilai >= 60) and (nilai <= 69):
+            return "D"
+        elif nilai <= 59:
+            return "E"
         else:
-            print("No Grade")
+            return "Tidak termasuk dalam kategori"
 
     @staticmethod
-    def tiga3():
-        n = int(input("Masukkan sebuah bilangan: "))
-        if n % 2 == 0:
-            print("Bilangan {} adalah genap.".format(n))
+    def tiga3(var):
+        bilangan = var
+
+        if bilangan % 2 == 0:
+            return "Genap"
         else:
-            print("Bilangan {} adalah ganjil.".format(n))
+            return "Ganjil"
 
     @staticmethod
-    def empat4():
-        tahun = int(input("Masukkan Data tahun: "))
-        if (tahun % 4) == 0:
-            if (tahun % 100) == 0:
-                if (tahun % 400) == 0:
-                    print("{0} merupakan tahun kabisat".format(tahun))
+    def empat4(var):
+        tahun = var
+
+        if tahun % 4 == 0:
+            if tahun % 100 == 0:
+                if tahun % 400 == 0:
+                    return "Tahun Kabisat"
                 else:
-                    print("{0} bukan merupakan tahun kabisat".format(tahun))
+                    return "Bukan Tahun Kabisat"
             else:
-                print("{0} merupakan tahun kabisat".format(tahun))
+                return "Tahun Kabisat"
         else:
-            print("{0} bukan merupakan tahun kabisat".format(tahun))
+            return "Bukan Tahun Kabisat"
 
     @staticmethod
-    def lima5():
-        film = int(input("Rating sebuah Film = "))
-
-        if (film >= 21):
-            print("Khusus DEWASA")
-
-        elif (film >= 13):
-            print("Khusus Remaja")
-
-        elif (film >= 9):
-            print("Bimbingan Orang tua")
-
-        elif (film < 9):
-            print("Semua Usia")
+    def lima5(var):
+        ratingFilms = var
+        if ratingFilms >= 21:
+            return "Dewasa"
+        elif ratingFilms >= 13:
+            return "Remaja"
+        elif ratingFilms >= 9:
+            return "BIMBINGAN ORANG TUA"
+        elif ratingFilms < 9:
+            return "SEMUA USIA"
 
     @staticmethod
-    def enam6():
-        first = int(input("Input pertama : "))
-        second = int(input("Input kedua : "))
+    def enam6(var1, var2):
+        bil = []
+        lbal1 = var1
+        lbal2 = var2
+        lbal3 = lbal2+1
+        rentangAngka = range(lbal1, lbal3)
 
-        for output in range(first, second+1):
-            print(output)
+        for i in rentangAngka:
+            bil.append(i)
+        return bil
 
     @staticmethod
     def tujuh7():
-        batasan = int(input('Masukkan Batasan Angka : '))
-
-        for a in range(2, batasan, 1):
-            mod = 1
-            for b in range(2, a, 1):
-                if (a % b == 0):
-                    mod = 0
-
-            if (mod == 1):
-                print(a)
+        prime = list()
+        for x in range(1, 100):
+            if x % 2 == 1:
+                prime.append(x)
+            else:
+                pass
+        return prime
 
     @staticmethod
     def delapan8():
-        def cetak(a, b):
-            for item in range(a, b):
-                if item % 2 == 0:
-                    if item % 5 == 0:
-                        if item % 100 == 0:
-                            print("%i. Genap Kelipatan Seratus" % (item))
-                        else:
-                            print("%i. Genap Kelipatan Lima" % (item))
-                    else:
-                        print("%i. Genap" % (item))
+        for i in range(1, 1001):
+            if (i % 2) == 1:
+                if (i % 5) == 0:
+                    if __name__ == "__main__":
+                        print(i, "Ganjil kelipatan 5")
                 else:
-                    if item % 5 == 0:
-                        print("%i. Ganjil Kelipatan Lima" % (item))
+                    if __name__ == "__main__":
+                        print(i, "Ganjil")
+            elif (i % 2) == 0:
+                if (i % 5) == 0:
+                    if (i % 100) == 0:
+                        if __name__ == "__main__":
+                            print(i, "kelipatan 100")
                     else:
-                        print("%i. Ganjil" % (item))
-
-        cetak(1, 200)
+                        if __name__ == "__main__":
+                            print(i, "Genap kelipatan 5")
+                else:
+                    if __name__ == "__main__":
+                        print(i, "Genap")
 
     @staticmethod
-    def sembilan9():
-        sentence = 'saya ingin makan nasi goreng'
-        string = sentence.split()
-        print(' '.join(string[::-1]))
+    def sembilan9(var):
+        text = var
+        pish = text.split()
+        rev = " ".join(reversed(pish))
+        return rev
 
     @staticmethod
     def sepuluh10():
         stuff = ['Meja', 'Buku', 'Topi', 'Baju', 'Kayu']
-        stuff.insert(5, "Celana")
+
         stuff.insert(0, "Handuk")
-        print(stuff)
 
+        stuff.insert(6, "Celana")
 
-if __name__ == "__main__":
-    Code.satu1
-    Code.dua2
-    Code.tiga3
-    Code.empat4
-    Code.lima5
-    Code.enam6
-    Code.tujuh7
-    Code.delapan8
-    Code.sembilan9
-    Code.sepuluh10
-    print("Result OK")
+        return stuff
